@@ -212,6 +212,7 @@ class AuthManager extends Controller
             return view('home');
     
     }
+    
 
     public function deps(Request $request) {
         if($request->unid){
