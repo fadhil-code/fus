@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\skills;
 use App\Models\researches;
+use App\Models\student_main_det;
+use App\Models\studentcertificates;
 use App\Models\superresearches;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -212,7 +214,7 @@ class AuthManager extends Controller
             return view('home');
     
     }
-    
+
 
     public function deps(Request $request) {
         if($request->unid){
@@ -1306,6 +1308,123 @@ public function state_studentstudy(Request $request,$id) {
         return view('home');
     
     }
+
+    function studentMainDet(Request $request,$stid){
+        if(Auth::check()){
+            $data2= students::where('id',$stid)->get();
+            foreach($data2 as $st)
+            {$stname=$st->stname;}
+            $sex='';
+            $bd='';
+            $photo='';
+            try {   
+       
+                $studentMainDet= student_main_det::where('stid',$stid)->get();
+                   foreach($studentMainDet as $studentMainDe)
+               {$bd=$studentMainDe->bd;
+                   $sex=$studentMainDe->sex;
+                   $photo=$studentMainDe->photo;
+               }
+    
+            } catch (Throwable $e) {            
+            }
+    
+            return view('studentMainDet',[
+            'stid'=>$stid,
+            'stname'=>$stname,
+            'bd'=>$bd,
+            'sex'=>$sex,
+            'photo'=>$photo,
+        ]);                                   
+            }
+            return view('login');
+        }
+        function studentMainDetPost(Request $request,$stid){
+            try {
+             $bd='';
+             $studentMainDet= student_main_det::where('stid',$stid)->get();
+
+                foreach($studentMainDet as $studentMainDe)
+            {$bd=$studentMainDe->bd;}
+                if($bd){
+                    if ($request->hasFile('photo')){
+                    $randomId       =   rand(2,50);
+                    $fileName = $randomId.time().$stid  . '.' . $request->file('photo')->extension();
+                    $request->photo->storeAs('public/sts', $fileName); 
+                    $student_main_det= student_main_det::where('stid',$stid)->update([
+                        'bd'=>$request->bd,
+                        'sex'=>$request->sex,
+                        'photo'=>$fileName
+                    ]); }
+                    else
+                    {    $student_main_det= student_main_det::where('stid',$stid)->update([
+                        'bd'=>$request->bd,
+                        'sex'=>$request->sex
+                    ]);}         
+                    return back()->with("success","تم تحديث المعلومات الشخصية بنجاح.");
+                }
+                else
+    {            $id = Auth::user()->id;
+                $data['stid']=$stid;
+                $data['sex']=$request->sex;
+                $data['bd']=$request->bd;
+                $randomId       =   rand(2,50);
+                $fileName = $randomId.time().$stid  . '.' . $request->file('photo')->extension();
+                $request->photo->storeAs('public/sts', $fileName);   
+                $data['photo']=$fileName;
+                $data['adduid']=$id;
+                $student_main_det= student_main_det::create($data);  
+              
+    
+                return back()->with("success","تم اضافة المعلومات بنجاح.");}
+            } catch (Throwable $e) {            
+                return redirect(route('home'))->with("success",report($e));     
+            }
+            }
+function studentcertificates(Request $request,$stid){
+                if(Auth::check()){
+                    $data2= students::where('id',$stid)->get();
+                    foreach($data2 as $st)
+                    {$stname=$st->stname;}
+                    $studentcertificates="";
+                    try {   
+               
+                        $studentcertificates= studentcertificates::where('stid',$stid)->get();
+
+            
+                    } catch (Throwable $e) {            
+                    }
+            
+                    return view('studentcertificates',[
+                    'stid'=>$stid,
+                    'stname'=>$stname,
+                    'studentcertificates'=>$studentcertificates
+                ]);                                   
+                    }
+                    return view('login');
+                }
+function studentcertificatesPost(Request $request,$stid){
+                    try {
+
+                        $id = Auth::user()->id;
+                        $data['stid']=$stid;
+                        $data['title']=$request->title;
+                        $data['inside']=$request->inside;
+                        $data['taeed']=$request->taeed;
+                        $data['taeeddate']=$request->taeeddate;
+                        $data['av']=$request->av;
+                        $data['qu']=$request->qu;
+                        $data['karar']=$request->karar;
+                        $data['karardate']=$request->karardate;
+                        $data['adduid']=$id;
+                        $studentcertificate= studentcertificates::create($data);  
+                      
+            
+                        return back()->with("success","تم اضافة الشهادة بنجاح.");
+                    } catch (Throwable $e) {            
+                        return redirect(route('home'))->with("success",report($e));     
+                    }
+                    }
 function resyear(Request $request,$ssid){
         try {
          //   $request->validate([

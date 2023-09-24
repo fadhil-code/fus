@@ -75,6 +75,13 @@ Route::get('/depstudentstudy/{id}',[AuthManager::class, 'depstudentstudy'])->nam
 Route::post('/depstudentstudy/{id}',[AuthManager::class, 'depstudentstudyPost'])->name('depstudentstudy.post');
 Route::get('/delete_depstudentstudy/{id}',[AuthManager::class, 'delete_depstudentstudyPost'])->name('delete_depstudentstudy.post');
 
+Route::get('/studentMainDet/{id}',[AuthManager::class, 'studentMainDet'])->name('studentMainDet');
+Route::post('/studentMainDetPost/{id}',[AuthManager::class, 'studentMainDetPost'])->name('studentMainDetPost');
+
+Route::get('/studentcertificates/{id}',[AuthManager::class, 'studentcertificates'])->name('studentcertificates');
+Route::post('/studentcertificatesPost/{id}',[AuthManager::class, 'studentcertificatesPost'])->name('studentcertificatesPost');
+Route::get('/delete_studentcertificates/{id}',[AuthManager::class, 'delete_studentcertificates'])->name('delete_studentcertificates');
+
 Route::get('/ststate/{id}',[AuthManager::class, 'ststate'])->name('ststate');
 Route::get('/getdiscussion/{id}',[AuthManager::class, 'getdiscussion'])->name('getdiscussion');
 Route::post('/discussionpost/{id} {dicid}',[AuthManager::class, 'discussionpost'])->name('discussionpost');
