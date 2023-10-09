@@ -6,7 +6,7 @@
             <h5>نظام متابعة الطلبة</h5>
 
             <div class="mb-3">
-                <img src="{{ asset('storage/images/1.jpg')}}" class="w3-circle " style="width:126px">
+                <img src="{{ asset('storage/images/2.jpg')}}" class="w3-circle " style="width:126px">
 
               </div>
             <form action="{{route('login.post')}}" method="POST" class="" >
