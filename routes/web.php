@@ -119,5 +119,3 @@ Route::get('/index_filtering_depmajors',[AuthManager::class, 'index_filtering_de
 Route::get('/index_filtering_subjects',[AuthManager::class, 'index_filtering_subjects'])->name('index_filtering_subjects');
 Route::get('deps', [AuthManager::class, 'deps'])->name('deps');
 Route::get('majs', [AuthManager::class, 'majs'])->name('majs');
-
-

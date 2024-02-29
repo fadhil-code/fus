@@ -58,6 +58,7 @@
         
       </div>
     </div>
+    
     <hr>
     <div class="w3-container" >
       <h5>القائمة الرئيسية</h5>
@@ -68,11 +69,11 @@
       @if (! auth()->user()->unid)
       <a id="channelsnav" href="{{route('channels')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  قنوات القبول</a>
       <a id="studiesnav" href="{{route('studies')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  الدراسات</a>
-      <a id="livenav" href="{{route('live')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  live</a>
-      <a id="majorsnav" href="{{route('majors')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i> admin التخصصات</a>
-      <a id="lecturerssnav" href="{{route('lecturerss')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i> admin التدريسيين</a>
-      <a id="subjectsnav" href="{{route('subjects')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  adminالمواد الدراسية</a>
-      <a id="studentsnav" href="{{route('students')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  admin الطلاب</a>
+      <a id="livenav" style="display: none" href="{{route('live')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  live</a>
+      <a id="majorsnav" style="display: none" href="{{route('majors')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i> admin التخصصات</a>
+      <a id="lecturerssnav" style="display: none" href="{{route('lecturerss')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i> admin التدريسيين</a>
+      <a id="subjectsnav" style="display: none" href="{{route('subjects')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  adminالمواد الدراسية</a>
+      <a id="studentsnav" style="display: none" href="{{route('students')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  admin الطلاب</a>
       <a id="universitiesnav" href="{{route('universities')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  الجامعات</a>
       <a id="accountsnav" href="{{route('accounts')}}" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  المستخدمين</a>
 
