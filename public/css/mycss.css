@@ -105,7 +105,7 @@ button:hover .filled {
     width: 100%;
     height: 100%;
     color: whitesmoke;
-    font-family: 'Fira Mono', monospace;
+    font-family: "Fira Mono", monospace;
     font-size: 24px;
     font-weight: 700;
     opacity: 1;
@@ -167,7 +167,7 @@ button:hover .filled {
 }
 
 .cardl::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     left: -5px;
@@ -175,7 +175,7 @@ button:hover .filled {
     margin: auto;
     height: 420px;
     border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    background: linear-gradient(-45deg, #2a3a76 0%, #f37528 100%);
     z-index: -10;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -186,7 +186,7 @@ button:hover .filled {
     z-index: -1;
     position: absolute;
     inset: 0;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    background: linear-gradient(-45deg, #2a3a76 0%, #f37528 100%);
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
 }
@@ -202,7 +202,7 @@ button:hover .filled {
 }
 
 .cardl p:last-child {
-    color: #e81cff;
+    color: #2a3a76;
     font-weight: 600;
 }
 
@@ -312,7 +312,7 @@ button:hover .filled {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom: 3px solid #fefefe;
-    background: linear-gradient(40deg, rgb(161, 244, 255) 0%, rgb(77, 139, 255) 50%, rgb(3, 0, 43) 100%);
+    background: linear-gradient( 40deg, rgb(161, 244, 255) 0%, rgb(77, 139, 255) 50%, rgb(3, 0, 43) 100%);
     transition: all 0.5s ease;
 }
 
@@ -323,7 +323,7 @@ button:hover .filled {
 .imagepro {
     width: 90px;
     height: 90px;
-    background-color: #1468BF;
+    background-color: #1468bf;
     border-radius: 50%;
     border: 4px solid #fefefe;
     margin-top: 30px;
@@ -341,7 +341,7 @@ button:hover .filled {
 .cardpro-info span {
     font-weight: 600;
     font-size: 24px;
-    color: #161A42;
+    color: #161a42;
     margin-top: 15px;
     line-height: 5px;
 }
@@ -352,7 +352,7 @@ button:hover .filled {
 
 .buttonpro {
     text-decoration: none;
-    background-color: #1468BF;
+    background-color: #1468bf;
     color: white;
     padding: 5px 20px;
     border-radius: 5px;
@@ -378,7 +378,7 @@ button:hover .filled {
 }
 
 .buttonpro:hover {
-    background-color: #FF6844;
+    background-color: #ff6844;
     transform: scale(1.1);
 }
 
@@ -444,11 +444,11 @@ button:hover .filled {
 }
 
 .contactButton {
-    background: #7079f0;
+    background: #2a3a76;
     color: white;
     font-family: inherit;
     padding: 0.45em;
-    padding-left: 1.0em;
+    padding-left: 1em;
     font-size: 17px;
     margin: auto;
     border-radius: 0.9em;
@@ -521,7 +521,7 @@ button:hover .filled {
 }
 
 .buttondelete::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     left: -4px;
@@ -530,7 +530,7 @@ button:hover .filled {
     width: 128px;
     height: 48px;
     border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    background: linear-gradient(-45deg, #2a3a76 0%, #40c9ff 100%);
     z-index: -10;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -581,7 +581,7 @@ button:hover .filled {
 .mytable th {
     padding: 3px;
     text-align: right;
-    background-color: #046daa;
+    background-color: #2a3a76;
     color: white;
 }
 

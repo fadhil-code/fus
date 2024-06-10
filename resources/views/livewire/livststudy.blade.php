@@ -68,10 +68,10 @@
         </td>
 
               <td>
-                <a href="{{route('delete_depstudentstudy.post',$studentstud->id)}}" class=" tablebutton mybutton3" ><i class="fa fa-trash-o" ></i> مسح</a>
                 <a href="{{route('supervisors',$studentstud->id)}}" class=" tablebutton mybutton2" ><i class="fa fa-plus" ></i> مشرف </a>
-                <a href="{{route('ststate',$studentstud->id)}}" class=" tablebutton mybutton4" ><i class="fa fa-exchange" ></i>  المرحلة </a>
-                <a href="{{route('stposition',$studentstud->id)}}" class=" tablebutton mybutton5" ><i class="fa fa-edit" ></i> الحالة </a>
+                <a href="{{route('ststate',$studentstud->id)}}" class=" tablebutton mybutton2" ><i class="fa fa-exchange" ></i>  المرحلة </a>
+                <a href="{{route('stposition',$studentstud->id)}}" class=" tablebutton mybutton2" ><i class="fa fa-edit" ></i> الحالة </a>
+                <a href="{{route('delete_depstudentstudy.post',$studentstud->id)}}" class=" tablebutton mybutton3" ><i class="fa fa-trash-o" ></i> مسح</a>
               </td>
             </tr>
             

@@ -82,11 +82,15 @@ class AuthManager extends Controller
             $departments= departments::count();
             $students= students::count();
             $subjects= subjects::count();
+            $lecturerss= lecturerss::count();
+            $researches= researches::count();
             return  view('welcome',['universities'=>$data2,
             'users'=>$users,
             'departments'=>$departments,
             'students'=>$students,
             'subjects'=>$subjects,
+            'lecturerss'=>$lecturerss,
+            'researches'=>$researches,
         ]);
         }
         $email=$request->input('email');

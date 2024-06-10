@@ -38,9 +38,9 @@
               </td>
 
               <td>
-                <a href="{{route('delete_depstudents.post',$student->id)}}" class=" tablebutton mybutton3" ><i class="fa fa-trash-o" ></i> مسح</a>
                 <a href="{{route('depstudentstudy',$student->id)}}" class=" tablebutton mybutton2" ><i class="fa fa-address-card" ></i>  السيرة الدراسية </a>
-                <a href="{{route('studentMainDet',$student->id)}}" class=" tablebutton mybutton1" ><i class="fa fa-address-card" ></i>  المعلوات الشخصية </a>
+                <a href="{{route('studentMainDet',$student->id)}}" class=" tablebutton mybutton2" ><i class="fa fa-address-card" ></i>  المعلوات الشخصية </a>
+                <a href="{{route('delete_depstudents.post',$student->id)}}" class=" tablebutton mybutton3" ><i class="fa fa-trash-o" ></i> مسح</a>
               </td>
             </tr>
             

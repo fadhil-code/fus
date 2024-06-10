@@ -5,6 +5,8 @@
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=El+Messiri'>
+
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,7 +18,8 @@
 
     
       <style>
-      html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+      html, body, h1, h2, h3, h4, h5 {font-family: "El Messiri", sans-serif;font-size: 15px;}
+
       </style>
 </head>
 
@@ -48,7 +51,7 @@
 <nav class="w3-sidebar w3-collapse w3-animate-right " style="z-index:3;width:300px;" id="mySidebar" ><br>
     <div class="w3-container w3-row">
       <div class="w3-col s4">
-        <img src="{{ asset('storage/images/1.jpg')}}" class="w3-circle w3-margin-right" style="width:46px">
+        <img src="{{ asset('storage/images/fuslogo.png')}}" class="w3-circle w3-margin-right" style="width:46px">
       </div>
       <div class="w3-col s8 w3-bar">
         <span>مرحبا, <strong>{{auth()->user()->fullname}}</strong></span><br>
@@ -129,22 +132,15 @@
       <div class="w3-row">
         <div class="w3-container w3-third">
           <h5 class="w3-bottombar w3-border-green">Demographic</h5>
-          <p>Language</p>
-          <p>Country</p>
-          <p>City</p>
+
         </div>
         <div class="w3-container w3-third">
           <h5 class="w3-bottombar w3-border-red">System</h5>
-          <p>Browser</p>
-          <p>OS</p>
-          <p>More</p>
+
         </div>
         <div class="w3-container w3-third">
           <h5 class="w3-bottombar w3-border-orange">Target</h5>
-          <p>Users</p>
-          <p>Active</p>
-          <p>Geo</p>
-          <p>Interests</p>
+
         </div>
       </div>
     </div>
